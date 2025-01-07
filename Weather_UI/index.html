@@ -6,7 +6,256 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Weather</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>CloudMate</title>
+    <style>
+      .bg-orange {
+        background-color: #fac914;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div
+      class="bg-cover bg-center w-full min-h-screen flex justify-center items-center"
+      style="
+        background-image: url('/assets/background.jpeg');
+      "
+    >
+      <div
+        class="w-full py-5 h-full flex flex-col items-center bg-opacity-50 bg-black"
+        style="
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+        "
+      >
+        <!-- Logo and navbar -->
+        <div
+          class="flex w-full justify-between items-center py-4 px-6"
+        >
+          <div class="logo">
+            <img
+              src="assets/logo.png"
+              alt="Logo"
+              class="w-20"
+            />
+          </div>
+          <div class="navbar">
+            <ul
+              class="flex space-x-8 text-white font-semibold"
+            >
+              <li
+                class="hover:text-gray-300 cursor-pointer"
+              >
+                Today
+              </li>
+              <li
+                class="hover:text-gray-300 cursor-pointer"
+              >
+                Hourly
+              </li>
+              <li
+                class="hover:text-gray-300 cursor-pointer"
+              >
+                Weekly
+              </li>
+              <li
+                class="hover:text-gray-300 cursor-pointer"
+              >
+                10 Days
+              </li>
+              <li
+                class="hover:text-gray-300 cursor-pointer"
+              >
+                Monthly
+              </li>
+            </ul>
+          </div>
+          <div class="profile">
+            <img
+              src="data:image/jpeg;base64,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"
+              alt=""
+              class="rounded-full w-12 h-12"
+            />
+          </div>
+        </div>
+
+        <!-- Search bar -->
+        <div
+          class="flex justify-center mt-8 w-full px-4"
+        >
+          <div
+            class="flex bg-white w-2/3 max-w-lg items-center px-4 py-2 rounded-full shadow-lg"
+          >
+            <i
+              class="fa-solid fa-location-crosshairs text-gray-500"
+            ></i>
+            <input
+              type="text"
+              placeholder="Location..."
+              class="flex-grow focus:outline-none ml-4"
+            />
+            <img
+              src="assets/search.png"
+              alt="Search"
+              class="w-8 ml-4 cursor-pointer"
+            />
+          </div>
+        </div>
+
+        <!-- Current weather and info -->
+        <div
+          class="flex flex-wrap justify-center mt-12 gap-8 px-4"
+        >
+          <!-- Current weather -->
+          <div
+            class="p-6 bg-white bg-opacity-75 rounded-2xl shadow-lg flex items-center space-y-4 space-x-3"
+          >
+            <div class="left">
+              <h2 class="text-xl font-semibold">
+                Weather
+              </h2>
+              <div
+                class="flex items-center text-6xl font-bold"
+              >
+                21<sup
+                  class="text-2xl font-medium"
+                  >°C</sup
+                >
+              </div>
+              <h3 class="text-lg font-semibold">
+                Cloudy
+              </h3>
+            </div>
+            <div
+              class="line w-px h-full bg-white"
+            >
+              &nbsp;
+            </div>
+            <div class="right">
+              <img
+                src="assets/cloudy-day.png"
+                alt="Cloudy"
+                class="w-20"
+              />
+            </div>
+          </div>
+
+          <!-- Additional info -->
+          <div
+            class="p-6 bg-white bg-opacity-75 rounded-2xl shadow-lg flex gap-6"
+          >
+            <div
+              class="flex flex-col items-center"
+            >
+              <h4 class="text-sm font-semibold">
+                Humidity
+              </h4>
+              <img
+                src="assets/humidity.png"
+                alt="Humidity"
+                class="w-12 mt-2"
+              />
+              <p
+                class="text-lg font-semibold mt-2"
+              >
+                38%
+              </p>
+            </div>
+            <div
+              class="flex flex-col items-center"
+            >
+              <h4 class="text-sm font-semibold">
+                UV Index
+              </h4>
+              <img
+                src="assets/uv-index.png"
+                alt="UV Index"
+                class="w-12 mt-2"
+              />
+              <p
+                class="text-lg font-semibold mt-2"
+              >
+                10
+              </p>
+            </div>
+            <div
+              class="flex flex-col items-center"
+            >
+              <h4 class="text-sm font-semibold">
+                Wind Speed
+              </h4>
+              <img
+                src="assets/wind.png"
+                alt="Wind Speed"
+                class="w-12 mt-2"
+              />
+              <p
+                class="text-lg font-semibold mt-2"
+              >
+                15 km/h
+              </p>
+            </div>
+            <div
+              class="flex flex-col items-center"
+            >
+              <h4 class="text-sm font-semibold">
+                Visibility
+              </h4>
+              <img
+                src="assets/visibility.png"
+                alt="Visibility"
+                class="w-12 mt-2"
+              />
+              <p
+                class="text-lg font-semibold mt-2"
+              >
+                10 km
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 Days Forecast -->
+        <div
+          class="w-full max-w-4xl bg-white bg-opacity-90 rounded-2xl shadow-lg mt-12 p-6"
+        >
+          <h3
+            class="text-center text-lg font-bold mb-6"
+          >
+            10 Days Weather Forecast
+          </h3>
+          <div class="grid grid-cols-5 gap-6">
+            <!-- Repeated forecast item -->
+            <div
+              class="flex flex-col items-center space-y-2"
+            >
+              <h4 class="font-semibold">Today</h4>
+              <img
+                src="assets/sun.png"
+                alt="Sunny"
+                class="w-8"
+              />
+              <div class="flex text-sm">
+                <span class="font-bold">28°</span>
+                <span class="mx-1">/</span>
+                <span>14°</span>
+              </div>
+            </div>
+            <!-- Additional days... -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
