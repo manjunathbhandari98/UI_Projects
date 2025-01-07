@@ -90,17 +90,23 @@
               class="fa-solid fa-location-crosshairs text-gray-500"
             ></i>
             <input
+              id="city"
               type="text"
               placeholder="Location..."
+              value=""
               class="sm:flex-grow focus:outline-none sm:ml-4"
             />
             <img
+              id="search-btn"
               src="assets/search.png"
               alt="Search"
               class="w-8 sm:ml-4 z-1 cursor-pointer hidden sm:block"
             />
 
-            <div class="sm:hidden mb-3">
+            <div
+              class="sm:hidden mb-3"
+              id="search-btn"
+            >
               <i
                 class="fa-solid fa-magnifying-glass absolute right-1 w-8 cursor-pointer"
               ></i>
@@ -123,14 +129,17 @@
                 Weather
               </h2>
               <div
+                id="currentWeather"
                 class="flex items-center text-3xl sm:text-6xl font-bold"
               >
-                21<sup
+                <div id="temperature">21</div>
+                <sup
                   class="sm:text-2xl text-xl font-medium"
                   >°C</sup
                 >
               </div>
               <h3
+                id="weather_description"
                 class="sm:text-lg text-sm font-semibold"
               >
                 Cloudy
@@ -143,6 +152,7 @@
             </div>
             <div class="right">
               <img
+                id="weather_icon"
                 src="assets/cloudy-day.png"
                 alt="Cloudy"
                 class="sm:w-20 w-14"
@@ -166,6 +176,7 @@
                 class="w-12 mt-2"
               />
               <p
+                id="humidity"
                 class="text-lg font-semibold mt-2"
               >
                 38%
@@ -183,6 +194,7 @@
                 class="w-12 mt-2"
               />
               <p
+                id="uvIndex"
                 class="text-lg font-semibold mt-2"
               >
                 10
@@ -200,6 +212,7 @@
                 class="w-12 mt-2"
               />
               <p
+                id="windSpeed"
                 class="text-lg font-semibold mt-2"
               >
                 15 km/h
@@ -217,6 +230,7 @@
                 class="w-12 mt-2"
               />
               <p
+                id="visibility"
                 class="text-lg font-semibold mt-2"
               >
                 10 km
@@ -234,6 +248,7 @@
                 class="w-12 mt-2"
               />
               <p
+                id="sunRise"
                 class="text-lg font-semibold mt-2"
               >
                 06:45am
@@ -251,6 +266,7 @@
                 class="w-12 mt-2"
               />
               <p
+                id="sunSet"
                 class="text-lg font-semibold mt-2"
               >
                 07:12pm
@@ -303,13 +319,20 @@
               </option>
             </select>
           </div>
+          <div
+            class="alert-warning p-4 bg-yellow-200 text-yellow-800 font-semibold text-center rounded-lg mb-4"
+          >
+            Note: The weekly data forecast is
+            still in development. The displayed
+            data is not real.
+          </div>
           <h3
             class="text-center sm:text-lg text-sm font-bold mb-6"
           >
-            10 Days Weather Forecast
+            Weekly Weather Forecast
           </h3>
           <div
-            class="sm:grid sm:grid-cols-5 flex flex-col gap-6"
+            class="sm:flex sm:flex-row flex flex-col gap-6 justify-center"
           >
             <!-- Repeated forecast item -->
             <div
@@ -327,10 +350,100 @@
                 <span>14°</span>
               </div>
             </div>
+
             <div
               class="flex sm:flex-col flex-row space-x-3 sm:space-x-0 items-center space-y-2 sm:border-none border-b border-gray-200"
             >
-              <h4 class="font-semibold">Today</h4>
+              <h4
+                id="day2"
+                class="font-semibold"
+              >
+                Today
+              </h4>
+              <img
+                src="assets/sun.png"
+                alt="Sunny"
+                class="w-8"
+              />
+              <div class="flex text-sm">
+                <span class="font-bold">28°</span>
+                <span class="mx-1">/</span>
+                <span>14°</span>
+              </div>
+            </div>
+
+            <div
+              class="flex sm:flex-col flex-row space-x-3 sm:space-x-0 items-center space-y-2 sm:border-none border-b border-gray-200"
+            >
+              <h4
+                id="day3"
+                class="font-semibold"
+              >
+                Today
+              </h4>
+              <img
+                src="assets/sun.png"
+                alt="Sunny"
+                class="w-8"
+              />
+              <div class="flex text-sm">
+                <span class="font-bold">28°</span>
+                <span class="mx-1">/</span>
+                <span>14°</span>
+              </div>
+            </div>
+
+            <div
+              class="flex sm:flex-col flex-row space-x-3 sm:space-x-0 items-center space-y-2 sm:border-none border-b border-gray-200"
+            >
+              <h4
+                id="day4"
+                class="font-semibold"
+              >
+                Today
+              </h4>
+              <img
+                src="assets/sun.png"
+                alt="Sunny"
+                class="w-8"
+              />
+              <div class="flex text-sm">
+                <span class="font-bold">28°</span>
+                <span class="mx-1">/</span>
+                <span>14°</span>
+              </div>
+            </div>
+
+            <div
+              class="flex sm:flex-col flex-row space-x-3 sm:space-x-0 items-center space-y-2 sm:border-none border-b border-gray-200"
+            >
+              <h4
+                id="day5"
+                class="font-semibold"
+              >
+                Today
+              </h4>
+              <img
+                src="assets/sun.png"
+                alt="Sunny"
+                class="w-8"
+              />
+              <div class="flex text-sm">
+                <span class="font-bold">28°</span>
+                <span class="mx-1">/</span>
+                <span>14°</span>
+              </div>
+            </div>
+
+            <div
+              class="flex sm:flex-col flex-row space-x-3 sm:space-x-0 items-center space-y-2 sm:border-none border-b border-gray-200"
+            >
+              <h4
+                id="day6"
+                class="font-semibold"
+              >
+                Today
+              </h4>
               <img
                 src="assets/sun.png"
                 alt="Sunny"
@@ -345,7 +458,12 @@
             <div
               class="flex sm:flex-col flex-row space-x-3 sm:space-x-0 items-center space-y-2 sm:border-none border-b border-gray-200"
             >
-              <h4 class="font-semibold">Today</h4>
+              <h4
+                id="day7"
+                class="font-semibold"
+              >
+                Today
+              </h4>
               <img
                 src="assets/sun.png"
                 alt="Sunny"
@@ -363,5 +481,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
