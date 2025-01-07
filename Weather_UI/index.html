@@ -37,7 +37,7 @@
       >
         <!-- Logo and navbar and profile -->
         <div
-          class="flex w-full justify-between items-center py-4 px-6"
+          class="flex w-full sm:justify-between justify-center items-center py-4 px-6"
         >
           <div class="logo">
             <img
@@ -46,7 +46,7 @@
               class="w-20"
             />
           </div>
-          <div class="navbar">
+          <div class="navbar sm:block hidden">
             <ul
               class="flex space-x-8 text-white font-semibold"
             >
@@ -84,7 +84,7 @@
           class="flex justify-center mt-8 w-full px-4"
         >
           <div
-            class="flex bg-white w-2/3 max-w-lg items-center px-4 py-2 rounded-full shadow-lg"
+            class="flex bg-white w-2/3 sm:max-w-lg items-center px-4 py-2 rounded-full shadow-lg relative"
           >
             <i
               class="fa-solid fa-location-crosshairs text-gray-500"
@@ -92,42 +92,52 @@
             <input
               type="text"
               placeholder="Location..."
-              class="flex-grow focus:outline-none ml-4"
+              class="sm:flex-grow focus:outline-none sm:ml-4"
             />
             <img
               src="assets/search.png"
               alt="Search"
-              class="w-8 ml-4 cursor-pointer"
+              class="w-8 sm:ml-4 z-1 cursor-pointer hidden sm:block"
             />
+
+            <div class="sm:hidden mb-3">
+              <i
+                class="fa-solid fa-magnifying-glass absolute right-1 w-8 cursor-pointer"
+              ></i>
+            </div>
           </div>
         </div>
 
         <!-- Current weather and info -->
         <div
-          class="flex flex-wrap justify-center mt-12 gap-8 px-4"
+          class="flex flex-col sm:flex-row flex-wrap justify-center mt-12 gap-8 px-4"
         >
           <!-- Current weather -->
           <div
-            class="p-6 bg-white bg-opacity-75 rounded-2xl shadow-lg flex items-center space-y-4 space-x-3"
+            class="p-6 bg-white bg-opacity-75 justify-center rounded-2xl shadow-lg flex items-center space-y-4 space-x-3"
           >
             <div class="left">
-              <h2 class="text-xl font-semibold">
+              <h2
+                class="text-md sm:text-xl font-semibold"
+              >
                 Weather
               </h2>
               <div
-                class="flex items-center text-6xl font-bold"
+                class="flex items-center text-3xl sm:text-6xl font-bold"
               >
                 21<sup
-                  class="text-2xl font-medium"
+                  class="sm:text-2xl text-xl font-medium"
                   >°C</sup
                 >
               </div>
-              <h3 class="text-lg font-semibold">
+              <h3
+                class="sm:text-lg text-sm font-semibold"
+              >
                 Cloudy
               </h3>
             </div>
             <div
-              class="line w-px h-full bg-white"
+              class="line hidden sm:block w-px h-full bg-white"
             >
               &nbsp;
             </div>
@@ -135,14 +145,14 @@
               <img
                 src="assets/cloudy-day.png"
                 alt="Cloudy"
-                class="w-20"
+                class="sm:w-20 w-14"
               />
             </div>
           </div>
 
           <!-- Additional info -->
           <div
-            class="p-6 bg-white bg-opacity-75 rounded-2xl shadow-lg flex gap-6"
+            class="p-6 bg-white bg-opacity-75 rounded-2xl shadow-lg sm:flex grid-cols-2 grid gap-6"
           >
             <div
               class="flex flex-col items-center"
@@ -212,22 +222,98 @@
                 10 km
               </p>
             </div>
+            <div
+              class="flex flex-col items-center"
+            >
+              <h4 class="text-sm font-semibold">
+                Sun Rise
+              </h4>
+              <img
+                src="assets/sun-rise.png"
+                alt="Sun-rise"
+                class="w-12 mt-2"
+              />
+              <p
+                class="text-lg font-semibold mt-2"
+              >
+                06:45am
+              </p>
+            </div>
+            <div
+              class="flex flex-col items-center"
+            >
+              <h4 class="text-sm font-semibold">
+                Sun Set
+              </h4>
+              <img
+                src="assets/sun-set.png"
+                alt="sun-set"
+                class="w-12 mt-2"
+              />
+              <p
+                class="text-lg font-semibold mt-2"
+              >
+                07:12pm
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- 10 Days Forecast -->
         <div
-          class="w-full max-w-4xl bg-white bg-opacity-90 rounded-2xl shadow-lg mt-12 mx-3 p-6"
+          class="sm:w-full sm:max-w-4xl max-w-xl bg-white bg-opacity-90 rounded-2xl shadow-lg mt-12 mx-3 p-6"
         >
+          <div
+            class="option-selector sm:hidden block flex justify-end mb-2"
+          >
+            <select
+              name=""
+              id=""
+              class="focus:outline-none"
+            >
+              <option
+                value="today"
+                class="custom-option"
+              >
+                Today
+              </option>
+              <option
+                value="hourly"
+                class="custom-option"
+              >
+                Hourly
+              </option>
+              <option
+                value="weekly"
+                class="custom-option"
+              >
+                Weekly
+              </option>
+              <option
+                value="monthly"
+                class="custom-option"
+              >
+                Monthly
+              </option>
+              <option
+                value="days10"
+                class="custom-option"
+              >
+                10 Days
+              </option>
+            </select>
+          </div>
           <h3
-            class="text-center text-lg font-bold mb-6"
+            class="text-center sm:text-lg text-sm font-bold mb-6"
           >
             10 Days Weather Forecast
           </h3>
-          <div class="grid grid-cols-5 gap-6">
+          <div
+            class="sm:grid sm:grid-cols-5 flex flex-col gap-6"
+          >
             <!-- Repeated forecast item -->
             <div
-              class="flex flex-col items-center space-y-2"
+              class="flex sm:flex-col flex-row space-x-3 sm:space-x-0 items-center space-y-2 sm:border-none border-b border-gray-200"
             >
               <h4 class="font-semibold">Today</h4>
               <img
@@ -241,6 +327,37 @@
                 <span>14°</span>
               </div>
             </div>
+            <div
+              class="flex sm:flex-col flex-row space-x-3 sm:space-x-0 items-center space-y-2 sm:border-none border-b border-gray-200"
+            >
+              <h4 class="font-semibold">Today</h4>
+              <img
+                src="assets/sun.png"
+                alt="Sunny"
+                class="w-8"
+              />
+              <div class="flex text-sm">
+                <span class="font-bold">28°</span>
+                <span class="mx-1">/</span>
+                <span>14°</span>
+              </div>
+            </div>
+            <div
+              class="flex sm:flex-col flex-row space-x-3 sm:space-x-0 items-center space-y-2 sm:border-none border-b border-gray-200"
+            >
+              <h4 class="font-semibold">Today</h4>
+              <img
+                src="assets/sun.png"
+                alt="Sunny"
+                class="w-8"
+              />
+              <div class="flex text-sm">
+                <span class="font-bold">28°</span>
+                <span class="mx-1">/</span>
+                <span>14°</span>
+              </div>
+            </div>
+
             <!-- Additional days... -->
           </div>
         </div>
