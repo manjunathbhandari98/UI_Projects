@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
+  <body class="bg-gray-200">
+    <div
+      class="w-full h-screen flex mt-16 justify-center"
+    >
+      <div
+        class="container flex flex-col gap-4"
+        style="width: 400px"
+      >
+        <!-- Display Screen -->
+        <div
+          class="display-screen bg-white rounded-xl shadow-lg p-4"
+        >
+          <p class="number flex justify-end"></p>
+          <h2
+            class="result flex justify-end text-2xl font-semibold"
+          >
+            0
+          </h2>
+        </div>
+
+        <!-- Buttons Section -->
+        <div
+          class="buttons grid grid-cols-4 gap-3"
+        >
+          <!-- Top Functional Buttons -->
+          <button class="buttons char-buttons">
+            C
+          </button>
+          <button
+            class="buttons char-buttons flex justify-center"
+          >
+            ⌫
+          </button>
+          <button class="buttons char-buttons">
+            %
+          </button>
+          <button
+            class="buttons char-buttons flex justify-center"
+          >
+            ÷
+          </button>
+
+          <!-- Number and Operator Buttons -->
+          <button class="buttons number-buttons">
+            7
+          </button>
+          <button class="buttons number-buttons">
+            8
+          </button>
+          <button class="buttons number-buttons">
+            9
+          </button>
+          <button
+            class="buttons char-buttons flex justify-center"
+          >
+            x
+          </button>
+
+          <button class="buttons number-buttons">
+            4
+          </button>
+          <button class="buttons number-buttons">
+            5
+          </button>
+          <button class="buttons number-buttons">
+            6
+          </button>
+          <button
+            class="buttons char-buttons flex justify-center"
+          >
+            -
+          </button>
+
+          <button class="buttons number-buttons">
+            1
+          </button>
+          <button class="buttons number-buttons">
+            2
+          </button>
+          <button class="buttons number-buttons">
+            3
+          </button>
+          <button
+            class="buttons char-buttons flex justify-center"
+          >
+            +
+          </button>
+
+          <!-- Zero, Decimal, and Equals Buttons -->
+          <button
+            class="buttons number-buttons col-span-2"
+          >
+            0
+          </button>
+          <button
+            class="buttons number-buttons flex justify-center"
+          >
+            .
+          </button>
+          <button
+            id="equals"
+            class="buttons char-buttons flex justify-center"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
