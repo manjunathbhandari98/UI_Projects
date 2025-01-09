@@ -26,7 +26,6 @@
           type="text"
           class="bg-transparent w-full mx-4 p-4 text-black border my-4 p-4"
           placeholder="type here..."
-          disabled
         />
         <div
           class="bg-black w-full mx-4 p-4 text-white grid gap-3 font-semibold"
@@ -129,7 +128,9 @@
             </div>
           </div>
           <!-- Backspace -->
-          <div class="buttons col-span-2">
+          <div
+            class="buttons col-span-2 backspace"
+          >
             <p>Backspace</p>
           </div>
           <!-- tab -->
@@ -142,7 +143,7 @@
           </div>
           <!-- W -->
           <div class="buttons">
-            <p>w</p>
+            <p>W</p>
           </div>
           <!-- E -->
           <div class="buttons">
@@ -193,7 +194,9 @@
             </div>
           </div>
           <!-- Capslock -->
-          <div class="buttons col-span-2">
+          <div
+            class="buttons col-span-2 capsLock"
+          >
             <p>CapsLock</p>
           </div>
           <!-- A -->
@@ -251,7 +254,7 @@
             <p>Enter</p>
           </div>
           <!-- Shift -->
-          <div class="buttons col-span-2">
+          <div class="buttons col-span-2 shift">
             <p>Shift</p>
           </div>
           <!-- Z -->
@@ -304,11 +307,11 @@
             </div>
           </div>
           <!-- Shift -->
-          <div class="buttons col-span-2">
+          <div class="buttons col-span-2 shift">
             <p>Shift</p>
           </div>
           <!-- Delete -->
-          <div class="buttons">
+          <div class="buttons deleteButton">
             <p>Delete</p>
           </div>
           <!-- ctrl -->
@@ -321,8 +324,10 @@
           </div>
           <!-- Space -->
           <div
-            class="buttons py-8 col-span-11"
-          ></div>
+            class="buttons py-8 col-span-11 space"
+          >
+            Space
+          </div>
           <!-- Alt -->
           <div class="buttons">
             <p>Alt</p>
@@ -334,5 +339,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
