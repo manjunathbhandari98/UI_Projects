@@ -1,0 +1,8 @@
+.buttons {
+  border: 1px solid white; /* border border-white */
+  display: flex; /* flex */
+  justify-content: center; /* justify-center */
+  align-items: center; /* items-center */
+  border-radius: 0.5rem; /* rounded-lg (8px) */
+  padding: 0.5rem; /* p-2 (8px) */
+}

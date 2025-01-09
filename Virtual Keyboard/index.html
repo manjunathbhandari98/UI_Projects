@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <title>Virtual Keyboard</title>
+  </head>
+  <body>
+    <div
+      class="w-full h-screen flex justify-center items-center"
+    >
+      <div class="flex flex-col">
+        <input
+          type="text"
+          class="bg-transparent w-full mx-4 p-4 text-black border my-4 p-4"
+          placeholder="type here..."
+          disabled
+        />
+        <div
+          class="bg-black w-full mx-4 p-4 text-white grid gap-3 font-semibold"
+          style="
+            grid-template-columns: repeat(
+              15,
+              1fr
+            );
+          "
+        >
+          <!-- ~ button -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>~</p>
+              <p>`</p>
+            </div>
+          </div>
+          <!-- 1 -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>!</p>
+              <p>1</p>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>@</p>
+              <p>2</p>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>#</p>
+              <p>3</p>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>$</p>
+              <p>4</p>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>%</p>
+              <p>5</p>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>^</p>
+              <p>6</p>
+            </div>
+          </div>
+          <!-- 7 -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>&</p>
+              <p>7</p>
+            </div>
+          </div>
+          <!-- 8 -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>*</p>
+              <p>8</p>
+            </div>
+          </div>
+          <!-- 9 -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>(</p>
+              <p>9</p>
+            </div>
+          </div>
+          <!-- 0 -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>)</p>
+              <p>0</p>
+            </div>
+          </div>
+          <!-- - -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>_</p>
+              <p>-</p>
+            </div>
+          </div>
+          <!-- + -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>+</p>
+              <p>=</p>
+            </div>
+          </div>
+          <!-- Backspace -->
+          <div class="buttons col-span-2">
+            <p>Backspace</p>
+          </div>
+          <!-- tab -->
+          <div class="buttons col-span-2">
+            <p>Tab</p>
+          </div>
+          <!-- Q -->
+          <div class="buttons">
+            <p>Q</p>
+          </div>
+          <!-- W -->
+          <div class="buttons">
+            <p>w</p>
+          </div>
+          <!-- E -->
+          <div class="buttons">
+            <p>E</p>
+          </div>
+          <!-- R -->
+          <div class="buttons">
+            <p>R</p>
+          </div>
+          <!-- T -->
+          <div class="buttons">
+            <p>T</p>
+          </div>
+          <!-- U -->
+          <div class="buttons">
+            <p>U</p>
+          </div>
+          <!-- I -->
+          <div class="buttons">
+            <p>I</p>
+          </div>
+          <!-- O -->
+          <div class="buttons">
+            <p>O</p>
+          </div>
+          <!-- P -->
+          <div class="buttons">
+            <p>P</p>
+          </div>
+          <!-- [{}] -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>{</p>
+              <p>[</p>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>}</p>
+              <p>]</p>
+            </div>
+          </div>
+          <!-- |\ -->
+          <div class="buttons col-span-2">
+            <div class="flex flex-col">
+              <p>|</p>
+              <p>\</p>
+            </div>
+          </div>
+          <!-- Capslock -->
+          <div class="buttons col-span-2">
+            <p>CapsLock</p>
+          </div>
+          <!-- A -->
+          <div class="buttons">
+            <p>A</p>
+          </div>
+          <!-- B -->
+          <div class="buttons">
+            <p>S</p>
+          </div>
+          <!-- D -->
+          <div class="buttons">
+            <p>D</p>
+          </div>
+          <!-- F -->
+          <div class="buttons">
+            <p>F</p>
+          </div>
+          <!-- G -->
+          <div class="buttons">
+            <p>G</p>
+          </div>
+          <!-- H -->
+          <div class="buttons">
+            <p>H</p>
+          </div>
+          <!-- J -->
+          <div class="buttons">
+            <p>J</p>
+          </div>
+          <!-- K -->
+          <div class="buttons">
+            <p>K</p>
+          </div>
+          <!-- L -->
+          <div class="buttons">
+            <p>L</p>
+          </div>
+          <!-- :; -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>:</p>
+              <p>;</p>
+            </div>
+          </div>
+          <!-- "' -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>"</p>
+              <p>'</p>
+            </div>
+          </div>
+          <!-- Enter -->
+          <div class="buttons col-span-2">
+            <p>Enter</p>
+          </div>
+          <!-- Shift -->
+          <div class="buttons col-span-2">
+            <p>Shift</p>
+          </div>
+          <!-- Z -->
+          <div class="buttons">
+            <p>Z</p>
+          </div>
+          <!-- X -->
+          <div class="buttons">
+            <p>X</p>
+          </div>
+          <!-- C -->
+          <div class="buttons">
+            <p>C</p>
+          </div>
+          <!-- V -->
+          <div class="buttons">
+            <p>V</p>
+          </div>
+          <!-- B -->
+          <div class="buttons">
+            <p>B</p>
+          </div>
+          <!-- N -->
+          <div class="buttons">
+            <p>N</p>
+          </div>
+          <!-- M -->
+          <div class="buttons">
+            <p>M</p>
+          </div>
+          <!-- <, -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p><</p>
+              <p>,</p>
+            </div>
+          </div>
+          <!-- >. -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>></p>
+              <p>.</p>
+            </div>
+          </div>
+          <!-- ?/ -->
+          <div class="buttons">
+            <div class="flex flex-col">
+              <p>?</p>
+              <p>/</p>
+            </div>
+          </div>
+          <!-- Shift -->
+          <div class="buttons col-span-2">
+            <p>Shift</p>
+          </div>
+          <!-- Delete -->
+          <div class="buttons">
+            <p>Delete</p>
+          </div>
+          <!-- ctrl -->
+          <div class="buttons">
+            <p>Ctrl</p>
+          </div>
+          <!-- Alt -->
+          <div class="buttons">
+            <p>Alt</p>
+          </div>
+          <!-- Space -->
+          <div
+            class="buttons py-8 col-span-11"
+          ></div>
+          <!-- Alt -->
+          <div class="buttons">
+            <p>Alt</p>
+          </div>
+          <!-- ctrl -->
+          <div class="buttons">
+            <p>Ctrl</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
