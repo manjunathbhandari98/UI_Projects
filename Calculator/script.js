@@ -11,8 +11,7 @@ let operator = ""; // Stores the selected operator
 
 // Function to update the display
 function updateDisplay() {
-  displayNumber.textContent =
-    previousInput || "0"; // Show current input or 0 if empty
+  displayNumber.textContent = previousInput || ""; // Show current input or nothing if empty
   displayResult.textContent = currentInput || "0"; // Show previous input or 0 if empty
 }
 
